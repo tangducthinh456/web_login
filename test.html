@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>web</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col">
+            One of three columns
+        </div>
+        <div class="col">
+            One of three columns
+        </div>
+        <div class="col">
+            One of three columns
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col">
+            One of three columns
+        </div>
+        <div class="col">
+            One of three columns
+        </div>
+        <div class="col">
+            One of three columns
+        </div>
+    </div>
+    <div class="row align-items-end">
+        <div class="col">
+            One of three columns
+        </div>
+        <div class="col">
+            One of three columns
+        </div>
+        <div class="col">
+            One of three columns
+        </div>
+    </div>
+</div>
+<div>
+    <script>
+        function loadDoc() {
+
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function()
+                {
+                        console.log(this);
+                        document.getElementById("vncredit").innerHTML = this.responseText;
+                };
+                xhttp.open("GET", "/templates/text.html", true);
+                xhttp.send();
+        }
+    </script>
+    <div id="vncredit">
+        <button  type="button"  onclick="loadDoc()">submit</button>
+    </div>
+    <form id="myForm" name="myForm" action="http://localhost/templates/" method="post">
+        Name: <input type="text" name="amount"><br>
+        <input type="number" name="duration">
+        <input type="text" name="fullname">
+        <input type="text" name="identity_id">
+        <input type="text" name="phone">
+        <input type="text" name="current_address">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

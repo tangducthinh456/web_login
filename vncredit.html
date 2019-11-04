@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="test.css">
+
+
+</head>
+<body style="background-color: #007bff">
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <a href="https://kenh14.vn">
+                        <img src="logo.png" width="150" height="90" align="left">
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="https://kenh14.vn" style="color: #dddddd">
+                        0868 559 390
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3" align="center" style="padding: 50px">
+                <a href="https://kenh14.vn" style="color: #dddddd">Trang chủ</a>
+            </div>
+            <div class="col-md-3" align="center" style="padding: 50px">
+                <a href="https://kenh14.vn"  style="color: #dddddd">Hỏi đáp</a>
+            </div>
+            <div class="col-md-3" align="center" style="padding: 50px">
+                <a href="formlogin.php" style="color: #dddddd">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+
+    <p align="center" style="font-size: 50px; color : white">Vay tín chấp siêu tốc</p>
+    <p align="center" style="font-size: 20px; color : white">Để đăng ký vay, bạn vui lòng cung cấp các thông
+        tin
+        cá nhân dưới đây, sau đó
+        xác
+        thực mã OTP và ấn nút "Đăng ký vay".</p>
+
+    <script>
+        function sendPOST()
+        {
+            var xhttp = new XMLHttpRequest();
+            var form = document.getElementById("submit");
+            var formdata = new FormData(form);
+            xhttp.open("POST", "/templates/index.php", true);
+
+            xhttp.send(formdata);
+            console.log(this);
+        }
+    </script>
+
+    <form id="submit"> <!--method="post" -->   <!--http://127.0.0.1:5000/ -->
+        <div class="container" style="background-color: white; padding: 50px" >
+            <div>
+                <h3><i>BƯỚC 1: CHỌN NHU CẦU VAY</i></h3>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>SỐ TIỀN MUỐN VAY</h3>
+                </div>
+                <div class="col">
+                    <h3>39.000.000đ</h3>
+                </div>
+            </div>
+            <input type="text" name="amount">
+
+            <div class="row">
+                <div class="col">
+                    <h3>THỜI GIAN VAY</h3>
+                </div>
+                <div class="col">
+                    <h3>12 THÁNG</h3>
+                </div>
+            </div>
+
+            <input type="text" name="duration">
+            <div align="center">
+                <h3>KHOẢN PHẢI TRẢ HÀNG THÁNG</h3>
+            </div>
+            <div align="center">
+                <h3>DDDDd</h3>
+            </div>
+            <div align="center">
+                <h4><u>*Thông tin bạn cần lưu ý:</u></h4>
+            </div>
+            <div align="center">
+                <p>Kết quả tính toán này chỉ mang tính chất tham khảo và có thể sai lệch nhỏ so với kết quả tính toán thực tế dựa theo hồ sơ tín dụng cá nhân của riêng bạn</p>
+            </div>
+            <h2><u>BƯỚC 2: NHẬP THÔNG TIN LIÊN HỆ</u></h2>
+            <div>
+                <input type="text" name="fullname" placeholder="Họ và tên">
+                <input type="hidden" name="form_level" value="11">
+                <input type="hidden" name="theme" value="nampth_ver1">
+            </div>
+            <div>
+                <input type="text" name="identity_id" placeholder="CMND">
+            </div>
+            <div>
+                <input type="text" name="phone" placeholder="Số điện thoại">
+            </div>
+            <div>
+                <input type="text" name="current_address" placeholder="--Tỉnh/Thành phố đang sinh sống/làm việc--">
+            </div>
+            <div>
+                <button type="button" onclick="sendPOST()">submit</button>
+            </div>
+        </div>
+    </form>
+
+    <section>
+        <div style="background-color: #f2f4f9; padding: 50px" >
+            <h2 align="center"><u>Điều kiện về khoản vay</u></h2>
+            <div class="row" style="padding: 45px" align="center">
+                <div class="col">
+                    <h3>Lương chuyển khoản</h3>
+                    <p>Khách hàng có lương chuyển khoản ngân hàng.</p>
+                </div>
+
+
+                <div class="col">
+                    <h3>Độ tuổi</h3>
+                    <p>Khách hàng là công dân Việt Nam, trong độ tuổi từ 20 đến 60 tuổi.</p>
+                </div>
+
+                <div class="col">
+                    <h3>Nợ xấu</h3>
+                    <p>Không có dư nợ xấu tại bất kỳ ngân hàng hay công ty tài chính nào cả.</p>
+                </div>
+            </div>
+            <h2 align="center"><b><u>Hồ sơ thủ tục</u></b></h2>
+            <div class="row" style="padding: 45px" align="center">
+                <div class="col">
+
+                    <p>Sổ hộ khẩu và chứng minh nhân dân hoặc thẻ căn cước ( bản photo )</p>
+                </div>
+
+
+                <div class="col">
+
+                    <p>Xác nhận tạm trú hoặc kt3.</p>
+                </div>
+
+                <div class="col">
+                    <p>Sao kê 3 tháng ngân hàng gần nhất</p>
+                </div>
+
+            </div>
+            <div class="row" style="padding: 45px" align="center">
+                <div class="col">
+                    <p>Hợp đồng lao động hoặc giấy xác nhận đang công tác tại công ty</p>
+                </div>
+                <div class="col">
+                    <p>Một hóa đơn điện hoặc nước tại nơi sinh sống</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="background-color: white">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="578db3e.jpg" width="600" height="450" align="right">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h2><b>Cho vay tín chấp bằng sổ hộ khẩu</b></h2>
+                <p>Vay tính chấp bằng số hộ khẩu là hình thức vay được nhiều người quan tâm hiện nay, chỉ cần sổ hộ khẩu
+                    hoặc CMND là bạn có thể vay được tiền rất nhanh chóng.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="padding: 50px">
+                <h2 align="left"><b>Đặc điểm của hình thức vay tín chấp bằng sổ hộ khẩu và CMND:</b></h2>
+                <div class="row">
+                    <div class="col">
+                        <h3><b>Xác thực danh tính</b></h3>
+                        <p>Người đi vay không cần chứng minh thu nhập và tài sản đảm bảo. Chỉ cần Sổ hộ khẩu hoặc CMND.</p>
+                    </div>
+                    <div class="col">
+                        <h3><b>Xét duyệt</b></h3>
+                        <p>Hồ sơ vay đơn giản, bạn chỉ cần chờ trong khoảng thời gian từ 1 - 7 ngày là đã có thể nhận được tiền vay.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3><b>Cách thức vay</b></h3>
+                        <p>Bạn có thể lựa chọn mức vay và thời gian chi trả một cách linh hoạt. Được hỗ trợ vay lên đến 100 triệu đồng Thời gian vay linh động từ 06 tháng đến 60 tháng</p>
+                    </div>
+                    <div class="col">
+                        <h3><b>Thẩm định</b></h3>
+                        <p>Sống tại hộ khẩu hay tạm trú đều được vay dưới hình thức này. Không đến nhà thẩm định</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #f2f4f9">
+        <div class="container" style="padding: 50px">
+            <div class="row">
+                <div class="col">
+                    <h2>Thông tin khoản vay</h2>
+                    <p>Thông tin một số khoản vay Vncredit đang cung cấp.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Khoản vay 1: Vay theo hóa đơn điện</h4>
+                            <p>Thông tin khoản vay:</p>
+                            <p>1.10 - 70 triệu</p>
+                            <p>2.Thời gian vay 6 - 60 tháng</p>
+                            <p>3.Lãi suất: 0.7 - 3% / tháng</p>
+                            <p>4.APR: 8.4% - 36% / năm</p>
+                            <p>Thông tin yêu cầu:</p>
+                            <p>Họ tên</p>
+                            <p>Sđt</p>
+                            <p>Công việc</p>
+                            <p>Tỉnh thành đang sinh sống</p>
+                            <p>Địa chỉ</p>
+                            <p>Giấy tờ có thể cung cấp</p>
+                        </div>
+
+                        <div class="col">
+                            <h4>Khoản vay 1: Vay theo hợp đồng lao động</h4>
+                            <p>Thông tin khoản vay:</p>
+                            <p>1.10 - 100 triệu</p>
+                            <p>2.Thời gian vay 6 - 36 tháng</p>
+                            <p>3.Lãi suất: 0.7 - 3% / tháng</p>
+                            <p>4.APR: 8.4% - 36% / năm</p>
+                            <p>Thông tin yêu cầu:</p>
+                            <p>Họ tên</p>
+                            <p>Sđt</p>
+                            <p>Công việc</p>
+                            <p>Tỉnh thành đang sinh sống</p>
+                            <p>Địa chỉ</p>
+                            <p>Giấy tờ có thể cung cấp</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="anh%20mau.jpg" width="540" height="540">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: white">
+        <div align="center" style="padding: 20px">
+            <h2>CÂU HỎI THƯỜNG GẶP</h2>
+        </div>
+        <div class="container" style="border: 2px solid #dddddd; border-radius: 5px; padding: 20px ">
+            <div style="background-color: #19a2b8" align="center">
+                <a href="https://kenh14.vn" style="color: white">
+                    Tôi muốn vay 100 triệu trong 5 năm tới thì cần làm thủ tục gì? Lãi suất và phí khoản vay ra sao?
+                </a>
+            </div>
+            <div style="padding: 5px">
+                <p>Khách hàng thực hiện khoản vay 100 triệu trong 5 năm với lãi suất 0,9%/tháng</p>
+                <p>Số lãi hàng tháng phải trả : 100.000.000Đ x 0,9% = 900.000 VNĐ</p>
+                <p>Số tiền gốc phải trả : 100.000.000Đ / 60 tháng = 1.666.666 VNĐ</p>
+                <p>Tổng số tiền phải trả : 2,566.666 VNĐ ( Tiền lãi + tiền gốc)</p>
+                <p>Phí bảo hiểm khoản vay 0vnđ</p>
+                <p>Phí làm hồ sơ 0vnđ</p>
+                <p>Khách hàng có thể tất toán sớm khi đủ 6 tháng. Phí phạt tính trên 4% dư nợ còn lại của số tiền gốc khách hàng vay tại thời điểm tất toán.</p>
+
+            </div>
+        </div>
+        <div class="container" style="border: 2px solid #dddddd; border-radius: 5px; padding: 20px ">
+            <div style="background-color: #19a2b8" align="center">
+                <a href="https://kenh14.vn" style="color: white">
+                    Vay tín chấp bằng sổ hộ khẩu và CMND là gì?
+                </a>
+            </div>
+        </div>
+        <div class="container" style="border: 2px solid #dddddd; border-radius: 5px; padding: 20px ">
+            <div style="background-color: #19a2b8" align="center">
+                <a href="https://kenh14.vn" style="color: white">
+                    Cho vay tín chấp bằng sổ hộ khẩu và CMND là gì? Tôi cần những thủ tục nào để có thể được vay?
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div style="background-color: #1d2124; padding: 50px" >
+        <div class="container">
+            <div align="center">
+                <h2 style="color: white">VNCREDIT - DUYỆT VAY TOÀN QUỐC</h2>
+            </div>
+            <div align="center">
+                <p style="color: white">Địa chỉ: Chung cư Ecolife Capitol Lê Văn Lương 58 Tố Hữu, Trung Văn, Từ Liêm, Hà Nội</p>
+            </div>
+            <div align="center">
+                <p style="color: white">2018 VCredit All right reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
